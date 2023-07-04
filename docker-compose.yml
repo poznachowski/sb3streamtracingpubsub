@@ -1,6 +1,7 @@
 version: '3.7'
 services:
-  pubsub_emulator:
-    image: thekevjames/gcloud-pubsub-emulator:latest
+  rabbitmq:
+    image: rabbitmq:management
     ports:
-      - 8085:8681
+      - 5672:5672
+      - 15672:15672

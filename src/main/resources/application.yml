@@ -2,19 +2,7 @@ spring:
   application:
     name: test-app
   cloud:
-    gcp:
-      pubsub:
-        emulator-host: localhost:8085
-        project-id: local
     stream:
-      gcp:
-        pubsub:
-          default:
-            consumer:
-              ack-mode: AUTO_ACK
-              auto-create-resources: true
-            producer:
-              auto-create-resources: true
       bindings:
         onArrival-in-0:
           destination: test-topic
